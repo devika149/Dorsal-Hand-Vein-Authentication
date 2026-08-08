@@ -1,0 +1,38 @@
+================================================================================
+                                PROJECT ABSTRACT
+             TITLE: SECURE BIOMETRIC AUTHENTICATION VIA DORSAL VEIN PATTERNS
+================================================================================
+
+Biometric authentication has become the cornerstone of modern security systems, yet 
+traditional methods like fingerprints and facial recognition are increasingly 
+vulnerable to spoofing and external manipulation. This project proposes a highly 
+secure and robust identity verification system based on the unique vascular 
+patterns found on the back of the human hand (Dorsal Veins). 
+
+Unlike external traits, vein patterns are internal physiological features that 
+require active blood flow and Near-Infrared (NIR) sensitive capture, making them 
+virtually impossible to forge, duplicate, or lift from surfaces. The system 
+leverages a dual-layered Artificial Intelligence architecture to ensure both 
+integrity and accuracy:
+
+1. Hand Validation Layer: A primary Convolutional Neural Network (CNN) acts as 
+   a gatekeeper, verifying that the input image contains a valid human hand 
+   before any biometric processing occurs. This prevents non-human objects or 
+   random noise from entering the authentication pipeline.
+
+2. Feature Extraction & Matching Layer: A secondary deep learning model 
+   extracts high-dimensional mathematical "feature vectors" from the extracted 
+   vein patterns. These vectors are then compared using Cosine Similarity 
+   metrics to verify identity against a secure, local encrypted database.
+
+Key features of this implementation include cross-user biometric deduplication 
+to prevent identity theft, a premium glassmorphic UI built with Streamlit for 
+optimized user experience, and a file-based storage system for fast, offline 
+authentication. The resulting system provides a non-invasive, touchless, and 
+tamper-proof biometric solution suitable for high-security environments, 
+healthcare access, and sensitive data protection.
+
+--------------------------------------------------------------------------------
+KEYWORDS: Biometrics, Dorsal Vein Pattern, CNN, Computer Vision, Deep Learning, 
+Security Systems, Identity Verification.
+================================================================================

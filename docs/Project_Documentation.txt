@@ -1,0 +1,67 @@
+========================================================================
+PROJECT TITLE: DORSAL HAND VEIN-BASED BIOMETRIC LOGIN SYSTEM
+========================================================================
+
+1. PROJECT OVERVIEW
+-------------------
+This system provides a password-less authentication solution by using unique 
+dorsal hand vein patterns as the primary biometric credential. Instead of 
+traditional passwords, users register their identity by providing an NIR image 
+of their hand, which is converted into a high-dimensional feature vector. 
+Subsequent logins are verified by comparing a live hand scan against the 
+stored biometric profile using Cosine Similarity.
+
+2. BIOMETRIC LOGIN FLOW
+-----------------------
+* Registration:
+  - User provides their Full Name.
+  - User uploads an NIR hand image (Golden Template).
+  - System extracts vein features and stores them in a serialized database.
+* Login:
+  - User enters their Registered Name.
+  - User uploads a live hand scan.
+  - System calculates the similarity between the live scan and the stored template.
+  - Authentication is successful only if the Similarity Score exceeds a 0.85 threshold.
+
+3. TECHNICAL WORKFLOW
+---------------------
+STEP 1: VEIN EXTRACTION (Miura Method)
+- NIR images are processed to extract the vein skeleton, removing skin 
+  texture and lighting variations.
+
+STEP 2: FEATURE ENCODING (VGG16 + Scaling)
+- The processed skeleton is fed into a pre-trained VGG16 Convolutional Neural 
+  Network to encode spatial patterns into a 512-dimensional vector.
+- Standard scaling is applied to ensure feature numerical stability.
+
+STEP 3: VERIFICATION (Cosine Similarity)
+- Authentication uses 1-to-1 verification logic.
+- Cosine Similarity measures the angle between the live vector and 
+  registered vector. 100% represents an exact match.
+
+4. FILE DESCRIPTIONS
+--------------------
+- app_streamlit.py: entry point managing the biometric login flow.
+- models/biometric_db.pkl: Persistent database storing User-to-Vector mappings.
+- models/cnn_model.h5: Neural network used for feature encoding.
+- models/scaler.pkl: Normalization weights for the feature vectors.
+- docs/Project_Documentation.txt: Technical blueprint (this file).
+
+5. UI FEATURES
+--------------
+- Password-less Interface: Biometric-only login system.
+- Secure Dashboard: A clean user-specific welcome area after successful login.
+- Match Confidence: Real-time feedback on matching accuracy during login.
+- Multi-User Support: Capability to register multiple unique profiles.
+- Glassmorphism Design: Modern, professional visual interface.
+
+6. HOW TO RUN THE PROJECT
+-------------------------
+1. Install requirements: pip install -r requirements.txt
+2. Launch: streamlit run app_streamlit.py
+3. Register your identity with an NIR hand image.
+4. Login using your name and a new scan of your hand.
+
+========================================================================
+DEVELOPED BY: AI PROJECT ASSISTANT
+========================================================================

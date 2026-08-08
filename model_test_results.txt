@@ -1,0 +1,14 @@
+
+--- Testing on HANDS ---
+File: person_004_db1_R1.png | [0,1]: 0.0043 | VGG16: 0.0000
+File: person_004_db1_R2.png | [0,1]: 0.0022 | VGG16: 0.0000
+File: person_004_db1_R3.png | [0,1]: 0.0024 | VGG16: 0.0000
+File: person_019_db1_R1.png | [0,1]: 0.0028 | VGG16: 0.0000
+File: person_019_db1_R2.png | [0,1]: 0.0026 | VGG16: 0.0000
+
+--- Testing on NON-HANDS ---
+File: 01_01_0005.png | [0,1]: 0.9997 | VGG16: 1.0000
+File: 01_01_0006.png | [0,1]: 1.0000 | VGG16: 1.0000
+File: 01_01_0007.png | [0,1]: 0.9998 | VGG16: 1.0000
+File: 01_02_0006.png | [0,1]: 0.9967 | VGG16: 1.0000
+File: 01_02_0007.png | [0,1]: 0.9096 | VGG16: 1.0000
