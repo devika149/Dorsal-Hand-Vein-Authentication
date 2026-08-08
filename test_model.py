@@ -1,3 +1,6 @@
+'''Adding a description for this project'''
+
+
 import tensorflow as tf
 import numpy as np
 import pickle
