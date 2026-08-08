@@ -109,7 +109,7 @@ The hybrid CNN–SVM approach significantly outperforms traditional single-class
 streamlit run app_streamlit.py
 ```
 
-Open the displayed `localhost` URL in your browser.
+
 
 
 ## 🚀 Applications
