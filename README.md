@@ -99,6 +99,18 @@ The system is evaluated using standard biometric metrics:
 The hybrid CNN–SVM approach significantly outperforms traditional single-classifier systems in reducing FAR and FRR.
 
 ---
+## 🚀 Run the Application
+
+```powershell
+# Activate virtual environment
+.\venv\Scripts\Activate.ps1
+
+# Run the application
+streamlit run app_streamlit.py
+```
+
+Open the displayed `localhost` URL in your browser.
+
 
 ## 🚀 Applications
 
